@@ -4,7 +4,7 @@ import string
 class CaesarCipher:
 
     @staticmethod
-    def encode(text: string, shift: int) -> object:
+    def encode(text: string, shift: int = 13) -> object:
         encoded_text = ''
         alphabet = string.ascii_lowercase
         for letter in text.lower():
@@ -16,7 +16,7 @@ class CaesarCipher:
         return encoded_text
     
     @staticmethod
-    def decode(text: string, shift: int) -> object:
+    def decode(text: string, shift: int = 13) -> object:
         decoded_text = ''
         alphabet = string.ascii_lowercase
         for letter in text.lower():
