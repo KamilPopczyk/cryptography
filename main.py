@@ -1,8 +1,6 @@
-import CaesarCipher
-
+from CaesarCipher import CaesarCipher
 
 if __name__ == "__main__":
     print("Cryptography")
-    x = CaesarCipher.CesarCipher()
-    x.test()
-    x.encode('Kamil', 2)
+    c = CaesarCipher.encode('Kamil  f', 2)
+    print(c)
