@@ -2,8 +2,6 @@ import string
 
 
 class CaesarCipher:
-    def test(self):
-        print(string.ascii_lowercase)
 
     @staticmethod
     def encode(text: string, shift: int) -> object:
@@ -16,4 +14,16 @@ class CaesarCipher:
                 x = alphabet.find(letter)
                 encoded_text += alphabet[(x + shift) % len(alphabet)]
         return encoded_text
+    
+    @staticmethod
+    def decode(text: string, shift: int) -> object:
+        decoded_text = ''
+        alphabet = string.ascii_lowercase
+        for letter in text.lower():
+            if letter is ' ':
+                decoded_text += ' '
+            else:
+                y = alphabet.find(letter)
+                decoded_text += alphabet[(y - shift) % len(alphabet)]
+        return decoded_text
 
