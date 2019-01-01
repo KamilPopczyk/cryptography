@@ -1,6 +1,7 @@
 from CaesarCipher import CaesarCipher
 from VigenereCipher import VigenereCipher
 from MatrixCipher import MatrixCipher
+from AtBashCipher import AtBashCipher
 
 if __name__ == "__main__":
     print("Cryptography")
@@ -19,5 +20,10 @@ if __name__ == "__main__":
     mc_decoded = MatrixCipher.decode(mc_encoded)
     print('Matrix cipher encoded: ', mc_encoded)
     print('Matrix cipher decoded: ', mc_decoded)
+
+    atc_encoded = AtBashCipher.encode('Ala ma kota')
+    atc_decoded = AtBashCipher.decode(atc_encoded)
+    print('AtBash cipher encoded: ', atc_encoded)
+    print('AtBash cipher decoded: ', atc_decoded)
 
 
