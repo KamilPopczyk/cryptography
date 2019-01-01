@@ -15,6 +15,9 @@ if __name__ == "__main__":
     vc_decoded = VigenereCipher.decode(vc_encoded, key)
     print('Vigenere cipher decoded: ', vc_decoded)
 
-    MatrixCipher.encode('Ala ma kota')
+    mc_encoded = MatrixCipher.encode('Ala ma kota')
+    mc_decoded = MatrixCipher.decode(mc_encoded)
+    print('Matrix cipher encoded: ', mc_encoded)
+    print('Matrix cipher decoded: ', mc_decoded)
 
 
