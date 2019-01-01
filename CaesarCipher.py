@@ -2,14 +2,13 @@ import string
 
 
 class CaesarCipher:
-
     @staticmethod
     def encode(text: string, shift: int = 13) -> object:
         encoded_text = ''
         alphabet = string.ascii_lowercase
         for letter in text.lower():
-            if letter is ' ':
-                encoded_text += ' '
+            if alphabet.find(letter) < 0:
+                encoded_text += letter
             else:
                 x = alphabet.find(letter)
                 encoded_text += alphabet[(x + shift) % len(alphabet)]
@@ -20,8 +19,8 @@ class CaesarCipher:
         decoded_text = ''
         alphabet = string.ascii_lowercase
         for letter in text.lower():
-            if letter is ' ':
-                decoded_text += ' '
+            if alphabet.find(letter) < 0:
+                decoded_text += letter
             else:
                 y = alphabet.find(letter)
                 decoded_text += alphabet[(y - shift) % len(alphabet)]
