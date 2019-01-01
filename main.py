@@ -1,5 +1,6 @@
 from CaesarCipher import CaesarCipher
 from VigenereCipher import VigenereCipher
+from MatrixCipher import MatrixCipher
 
 if __name__ == "__main__":
     print("Cryptography")
@@ -13,4 +14,7 @@ if __name__ == "__main__":
     print('Vigenere cipher encoded: ', vc_encoded)
     vc_decoded = VigenereCipher.decode(vc_encoded, key)
     print('Vigenere cipher decoded: ', vc_decoded)
+
+    MatrixCipher.encode('Ala ma kota')
+
 
