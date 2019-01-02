@@ -2,6 +2,7 @@ from CaesarCipher import CaesarCipher
 from VigenereCipher import VigenereCipher
 from MatrixCipher import MatrixCipher
 from AtBashCipher import AtBashCipher
+from XORCipher import XORCipher
 
 if __name__ == "__main__":
     print("Cryptography")
@@ -25,5 +26,7 @@ if __name__ == "__main__":
     atc_decoded = AtBashCipher.decode(atc_encoded)
     print('AtBash cipher encoded: ', atc_encoded)
     print('AtBash cipher decoded: ', atc_decoded)
+
+    XORCipher.encode('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore', key)
 
 
